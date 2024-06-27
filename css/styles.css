@@ -136,13 +136,4 @@ header.hero .btn {
 .form button {
     padding: 10px 20px;
     background-color: #f90;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color:
+   
