@@ -5,76 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesus A. Saenz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Jesus A. Saenz</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/experience">Experience</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>Welcome to the Professional Profile of Jesus A. Saenz</h1>
             <p>Expert in Cybersecurity, Systems Engineering, and Supplier Quality Management</p>
-            <a href="/contact" class="btn">Contact Me</a>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
     </header>
 
     <!-- Core Competencies Section -->
     <section class="features">
         <h2>Core Competencies</h2>
-        <div class="feature-item">
-            <h3>Cybersecurity Expertise</h3>
-            <p>Certified in Security+ with experience in penetration testing, cryptography, and security architecture design.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Systems Engineering</h3>
-            <p>Proven track record in automotive and network systems architecture.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Supplier Quality Engineering</h3>
-            <p>Led teams in process standardization, risk assessments, and supplier collaboration for compliance and efficiency.</p>
+        <div class="container">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity Expertise</h3>
+                <p>Certified in Security+ with experience in penetration testing, cryptography, and security architecture design.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Systems Engineering</h3>
+                <p>Proven track record in automotive and network systems architecture.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-industry"></i>
+                <h3>Supplier Quality Engineering</h3>
+                <p>Led teams in process standardization, risk assessments, and supplier collaboration for compliance and efficiency.</p>
+            </div>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section class="blog">
         <h2>Relevant Projects and Experience</h2>
-        <div class="blog-item">
-            <h3>Security Architecture Design</h3>
-            <p>Project focused on designing a robust security architecture.</p>
-        </div>
-        <div class="blog-item">
-            <h3>Automotive Systems Architecture</h3>
-            <p>Project involved detailed systems architecture for automotive applications.</p>
-        </div>
-        <div class="blog-item">
-            <h3>Supplier Collaboration at Boeing</h3>
-            <p>Collaboration with suppliers to ensure quality and compliance.</p>
-        </div>
-        <div class="blog-item">
-            <h3>Training and Compliance</h3>
-            <p>Developed and implemented training programs to enhance compliance.</p>
+        <div class="container">
+            <div class="blog-item">
+                <img src="cybersecurity-project.jpg" alt="Cybersecurity Project">
+                <h3>Security Architecture Design</h3>
+                <p>Project focused on designing a robust security architecture.</p>
+            </div>
+            <div class="blog-item">
+                <img src="automotive-systems.jpg" alt="Automotive Systems">
+                <h3>Automotive Systems Architecture</h3>
+                <p>Project involved detailed systems architecture for automotive applications.</p>
+            </div>
+            <div class="blog-item">
+                <img src="supplier-collaboration.jpg" alt="Supplier Collaboration">
+                <h3>Supplier Collaboration at Boeing</h3>
+                <p>Collaboration with suppliers to ensure quality and compliance.</p>
+            </div>
+            <div class="blog-item">
+                <img src="training-session.jpg" alt="Training Session">
+                <h3>Training and Compliance</h3>
+                <p>Developed and implemented training programs to enhance compliance.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>Contact Information</h2>
-        <p>Name: Jesus A. Saenz</p>
-        <p>Address: Bothell, WA</p>
-        <p>Phone: 713-392-4529</p>
-        <p>Email: <a href="mailto:Jesus.A.Saenz1@gmail.com">Jesus.A.Saenz1@gmail.com</a></p>
+        <div class="container">
+            <p><i class="fas fa-user"></i> Name: Jesus A. Saenz</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: Bothell, WA</p>
+            <p><i class="fas fa-phone"></i> Phone: 713-392-4529</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Jesus.A.Saenz1@gmail.com">Jesus.A.Saenz1@gmail.com</a></p>
+        </div>
     </section>
 
     <!-- Form Section -->
     <section class="form">
         <h2>Get in Touch</h2>
-        <form action="/send-message" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="container">
+            <form action="/send-message" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
