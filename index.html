@@ -1,119 +1,116 @@
-/* styles.css */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus A. Saenz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Jesus A. Saenz</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/experience">Experience</a></li>
+                <li><a href="/skills">Skills</a></li>
+                <li><a href="/education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-}
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the Professional Profile of Jesus A. Saenz</h1>
+            <p>Expert in Cybersecurity, Systems Engineering, and Supplier Quality Management</p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </header>
 
-header.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
+    <!-- Core Competencies Section -->
+    <section class="features">
+        <h2>Core Competencies</h2>
+        <div class="container">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity Expertise</h3>
+                <p>Certified in Security+ with experience in penetration testing, cryptography, and security architecture design.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Systems Engineering</h3>
+                <p>Proven track record in automotive and network systems architecture.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-industry"></i>
+                <h3>Supplier Quality Engineering</h3>
+                <p>Led teams in process standardization, risk assessments, and supplier collaboration for compliance and efficiency.</p>
+            </div>
+        </div>
+    </section>
 
-header.hero .hero-content {
-    max-width: 800px;
-    margin: auto;
-}
+    <!-- Blog Section -->
+    <section class="blog">
+        <h2>Relevant Projects and Experience</h2>
+        <div class="container">
+            <div class="blog-item">
+                <img src="cybersecurity-project.jpg" alt="Cybersecurity Project">
+                <h3>Security Architecture Design</h3>
+                <p>Project focused on designing a robust security architecture.</p>
+            </div>
+            <div class="blog-item">
+                <img src="automotive-systems.jpg" alt="Automotive Systems">
+                <h3>Automotive Systems Architecture</h3>
+                <p>Project involved detailed systems architecture for automotive applications.</p>
+            </div>
+            <div class="blog-item">
+                <img src="supplier-collaboration.jpg" alt="Supplier Collaboration">
+                <h3>Supplier Collaboration at Boeing</h3>
+                <p>Collaboration with suppliers to ensure quality and compliance.</p>
+            </div>
+            <div class="blog-item">
+                <img src="training-session.jpg" alt="Training Session">
+                <h3>Training and Compliance</h3>
+                <p>Developed and implemented training programs to enhance compliance.</p>
+            </div>
+        </div>
+    </section>
 
-header.hero h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Information</h2>
+        <div class="container">
+            <p><i class="fas fa-user"></i> Name: Jesus A. Saenz</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: Bothell, WA</p>
+            <p><i class="fas fa-phone"></i> Phone: 713-392-4529</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Jesus.A.Saenz1@gmail.com">Jesus.A.Saenz1@gmail.com</a></p>
+        </div>
+    </section>
 
-header.hero p {
-    font-size: 1.2em;
-}
+    <!-- Form Section -->
+    <section class="form">
+        <h2>Get in Touch</h2>
+        <div class="container">
+            <form action="/send-message" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-header.hero .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f90;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-header.hero .btn:hover {
-    background-color: #ff7700;
-}
-
-.features, .blog, .contact, .form {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.features h2, .blog h2, .contact h2, .form h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.features-container, .blog-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.feature-item, .blog-item {
-    flex: 1 1 calc(33% - 20px);
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.feature-item:hover, .blog-item:hover {
-    transform: translateY(-5px);
-}
-
-.feature-item i, .contact-info i {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #f90;
-}
-
-.form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form input, .form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form button {
-    padding: 10px 20px;
-    background-color: #f90;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.form button:hover {
-    background-color: #ff7700;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
+    <!-- Footer -->
+    <footer>
+        <p>Professional Profile of Jesus A. Saenz</p>
+    </footer>
+</body>
+</html>
