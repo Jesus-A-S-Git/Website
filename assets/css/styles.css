@@ -5,21 +5,34 @@ body {
     background-color: #f8f9fa;
 }
 
+header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .hero-section {
     height: 100vh;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/background.jpg') no-repeat center center/cover;
 }
 
-header .navbar-brand {
-    font-size: 1.5rem;
+.hero-section .content {
+    max-width: 600px;
 }
 
-header .nav-link {
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #0069d9;
+    border: none;
+    padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
-}
-
-main {
-    padding-top: 2rem;
 }
 
 footer {
@@ -32,11 +45,12 @@ footer {
     padding: 1rem 0;
 }
 
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+.animate__animated {
+    animation-duration: 1.5s;
 }
 
-.card:hover {
-    transform: scale(1.05);
+@media (min-width: 768px) {
+    .hero-section h1 {
+        font-size: 4.5rem;
+    }
 }
