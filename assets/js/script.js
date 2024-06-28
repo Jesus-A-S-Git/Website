@@ -4,5 +4,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 // Setting a custom cursor for the entire website
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.style.cursor = 'url(../images/cursor.png), auto';
+    document.body.style.cursor = 'url(assets/images/cursor.png), auto';
 });
