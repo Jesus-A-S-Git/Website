@@ -1,5 +1,3 @@
-# Updated HTML content with enhancements
-enhanced_index_html_content = '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +50,46 @@ enhanced_index_html_content = '''
         .dark-mode .navbar {
             background-color: rgba(0, 0, 0, 0.8) !important;
         }
+        .projects-section {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .projects-grid .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .parallax {
+            background-image: url('assets/images/parallax-background.jpg');
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .parallax::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .parallax .content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     </style>
 </head>
 <body>
@@ -78,6 +116,31 @@ enhanced_index_html_content = '''
                 <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to My Professional Portfolio</h1>
                 <p class="lead animate__animated animate__fadeInUp">Showcasing my skills, projects, and experiences in cybersecurity and engineering.</p>
                 <a href="about.html" class="btn btn-primary btn-lg mt-3 animate__animated animate__fadeInUp">Learn More</a>
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Projects</h2>
+                <div class="projects-grid">
+                    <div class="card">
+                        <h3>Project One</h3>
+                        <p>Description of project one.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project Two</h3>
+                        <p>Description of project two.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project Three</h3>
+                        <p>Description of project three.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="parallax">
+            <div class="content">
+                <h2>Parallax Section</h2>
+                <p>Engage users with a dynamic parallax scrolling effect.</p>
             </div>
         </section>
     </main>
