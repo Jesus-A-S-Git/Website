@@ -1,3 +1,5 @@
+# Updated HTML content with enhancements
+enhanced_index_html_content = '''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,51 @@
     <title>Jesus A Saenz - Professional Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            height: 100vh;
+            color: #fff;
+        }
+        .hero-section .content {
+            max-width: 600px;
+        }
+        .btn-primary {
+            background-color: #2575fc;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #6a11cb;
+        }
+        .navbar {
+            transition: background-color 0.3s;
+        }
+        .sticky-navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .card {
+            background-color: #1e1e1e;
+        }
+        .dark-mode .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-white p-3 shadow-lg">
@@ -20,6 +67,7 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="darkModeToggle">Dark Mode</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,10 +81,21 @@
             </div>
         </section>
     </main>
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Jesus A Saenz</p>
-    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('sticky-navbar');
+            } else {
+                navbar.classList.remove('sticky-navbar');
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
