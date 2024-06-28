@@ -6,7 +6,50 @@
     <title>Projects - Jesus A Saenz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-section {
+            background: url('assets/images/projects-background.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .projects-content {
+            padding: 60px 0;
+        }
+        .projects-content h2 {
+            margin-bottom: 20px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .card {
+            background-color: #1e1e1e;
+        }
+    </style>
 </head>
 <body>
     <header class="bg-dark text-white p-3 shadow-lg">
@@ -21,73 +64,41 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="darkModeToggle">Dark Mode</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main class="container py-5">
-        <h2 class="text-center mb-4 animate__animated animate__fadeInDown">Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project1.jpg" class="card-img-top" alt="Security Architecture Design">
-                    <div class="card-body">
-                        <h5 class="card-title">Security Architecture Design</h5>
-                        <p class="card-text">Designed and implemented a robust security architecture for an enterprise system, ensuring compliance with industry standards.</p>
-                    </div>
+    <main>
+        <section class="hero-section">
+            <div class="content">
+                <h1>My Projects</h1>
+            </div>
+        </section>
+        <section class="projects-content container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <h3>Project One</h3>
+                    <p>Description of project one. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                </div>
+                <div class="card">
+                    <h3>Project Two</h3>
+                    <p>Description of project two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                </div>
+                <div class="card">
+                    <h3>Project Three</h3>
+                    <p>Description of project three. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project2.jpg" class="card-img-top" alt="Penetration Testing">
-                    <div class="card-body">
-                        <h5 class="card-title">Penetration Testing</h5>
-                        <p class="card-text">Conducted thorough penetration testing to identify and mitigate security vulnerabilities in critical systems.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project3.jpg" class="card-img-top" alt="Cryptography Cracking">
-                    <div class="card-body">
-                        <h5 class="card-title">Cryptography Cracking</h5>
-                        <p class="card-text">Performed cryptography cracking to test the resilience of encryption algorithms and enhance data security.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project4.jpg" class="card-img-top" alt="Live Incident Response">
-                    <div class="card-body">
-                        <h5 class="card-title">Live Incident Response</h5>
-                        <p class="card-text">Led live incident response teams to manage and mitigate security breaches, ensuring minimal impact on operations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project5.jpg" class="card-img-top" alt="Automotive Systems Architecture">
-                    <div class="card-body">
-                        <h5 class="card-title">Automotive Systems Architecture</h5>
-                        <p class="card-text">Developed and optimized automotive systems architecture for improved performance and reliability.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4 animate__animated animate__fadeInUp">
-                    <img src="assets/images/project6.jpg" class="card-img-top" alt="Network Systems Architecture">
-                    <div class="card-body">
-                        <h5 class="card-title">Network Systems Architecture</h5>
-                        <p class="card-text">Designed and implemented network systems architecture to enhance communication and data transfer efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Jesus A Saenz</p>
-    </footer>
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
