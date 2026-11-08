@@ -1,67 +1,454 @@
+/* =========================================================
+   Theme tokens
+   Dark is the default; light follows the OS setting unless the
+   visitor picks a theme with the toggle (stored in localStorage).
+   ========================================================= */
+:root {
+    --bg: #0b1120;
+    --bg-elevated: #111a2e;
+    --surface-hover: rgba(148, 163, 184, 0.07);
+    --text: #94a3b8;
+    --text-strong: #e2e8f0;
+    --text-muted: #64748b;
+    --border: rgba(148, 163, 184, 0.16);
+    --accent: #5eead4;
+    --accent-strong: #2dd4bf;
+    --accent-soft: rgba(45, 212, 191, 0.12);
+    --on-accent: #042f2e;
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+        --bg: #f8fafc;
+        --bg-elevated: #ffffff;
+        --surface-hover: rgba(15, 23, 42, 0.04);
+        --text: #475569;
+        --text-strong: #0f172a;
+        --text-muted: #64748b;
+        --border: rgba(15, 23, 42, 0.12);
+        --accent: #0f766e;
+        --accent-strong: #0d9488;
+        --accent-soft: rgba(13, 148, 136, 0.1);
+        --on-accent: #ffffff;
+        color-scheme: light;
+    }
+}
+
+:root[data-theme="light"] {
+    --bg: #f8fafc;
+    --bg-elevated: #ffffff;
+    --surface-hover: rgba(15, 23, 42, 0.04);
+    --text: #475569;
+    --text-strong: #0f172a;
+    --text-muted: #64748b;
+    --border: rgba(15, 23, 42, 0.12);
+    --accent: #0f766e;
+    --accent-strong: #0d9488;
+    --accent-soft: rgba(13, 148, 136, 0.1);
+    --on-accent: #ffffff;
+    color-scheme: light;
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #848688;
-    cursor: url('assets/images/cursor.png'), auto;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-header {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: black; /* Ensuring header text is black */
+/* Soft accent glow behind the page, a common touch on modern portfolios */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(700px circle at 0% 0%, var(--accent-soft), transparent 60%);
+    z-index: -1;
 }
 
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/background.jpg') no-repeat center center/cover;
+h1, h2, h3 { color: var(--text-strong); line-height: 1.25; margin: 0; }
+p { margin: 0 0 1rem; }
+strong { color: var(--text-strong); font-weight: 600; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-strong); }
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--on-accent);
+    border-radius: 6px;
+    z-index: 100;
+}
+.skip-link:focus { left: 1rem; }
+
+/* =========================================================
+   Layout: sticky sidebar + scrolling content
+   ========================================================= */
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.hero-section .content {
-    max-width: 600px;
+@media (min-width: 1024px) {
+    .layout {
+        display: flex;
+        gap: 4rem;
+        padding: 0 3rem;
+    }
 }
 
-.hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.sidebar {
+    padding: 4rem 0 1rem;
 }
 
-.hero-section p {
-    font-size: 1.25rem;
+@media (min-width: 1024px) {
+    .sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 44%;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem 0 4rem;
+    }
+}
+
+main {
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+    main {
+        width: 56%;
+        padding: 6rem 0;
+    }
+}
+
+/* =========================================================
+   Sidebar content
+   ========================================================= */
+.avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
     margin-bottom: 1.5rem;
 }
 
-.btn-primary {
-    background-color: #0069d9;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
+.name {
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.name a { color: inherit; }
+
+.role {
+    margin: 0.75rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-strong);
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+.tagline {
+    margin-top: 1rem;
+    max-width: 22rem;
 }
 
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.section-nav { display: none; }
+
+@media (min-width: 1024px) {
+    .section-nav { display: block; margin-top: 4rem; }
 }
 
-.card:hover {
-    transform: scale(1.05);
+.section-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
-.animate__animated {
-    animation-duration: 1.5s;
+.section-nav .indicator {
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.2s;
 }
 
-@media (min-width: 768px) {
-    .hero-section h1 {
-        font-size: 4.5rem;
+.section-nav a:hover,
+.section-nav a.active { color: var(--text-strong); }
+
+.section-nav a:hover .indicator,
+.section-nav a.active .indicator { width: 4rem; }
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.socials { display: flex; gap: 1.25rem; }
+.socials a {
+    display: block;
+    color: var(--text-muted);
+    transition: color 0.15s, transform 0.15s;
+}
+.socials a:hover { color: var(--text-strong); transform: translateY(-2px); }
+
+.theme-toggle {
+    margin-left: auto;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-strong);
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+.theme-toggle:hover { background: var(--surface-hover); }
+
+@media (min-width: 1024px) {
+    .theme-toggle { margin-left: 0.5rem; }
+}
+
+/* Show the icon of the theme you'd switch TO */
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-toggle .icon-sun { display: none; }
+    :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: block; }
+}
+
+/* =========================================================
+   Sections
+   ========================================================= */
+.section {
+    padding-top: 4rem;
+    scroll-margin-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .section { padding-top: 0; margin-bottom: 7rem; scroll-margin-top: 6rem; }
+    .section:last-of-type { margin-bottom: 4rem; }
+}
+
+.section-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-strong);
+    margin-bottom: 1.5rem;
+}
+
+/* On mobile the section title sticks to the top while you scroll */
+@media (max-width: 1023px) {
+    .section-title {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        margin: 0 -1.5rem 1.5rem;
+        padding: 1.1rem 1.5rem;
+        background: color-mix(in srgb, var(--bg) 85%, transparent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
 }
+
+.lead { font-size: 1.05rem; }
+
+/* =========================================================
+   Experience timeline & project cards
+   ========================================================= */
+.timeline { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.entry,
+.project {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.entry {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1.25rem;
+    margin: 0 -1.25rem;
+}
+
+@media (min-width: 640px) {
+    .entry { grid-template-columns: 9rem 1fr; gap: 1.5rem; }
+}
+
+.entry:hover,
+.project:hover {
+    background: var(--surface-hover);
+    border-color: var(--border);
+}
+
+.entry-date {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-top: 0.2rem;
+}
+
+.entry h3,
+.project h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.org { color: var(--accent); font-weight: 500; }
+
+.bullets { margin-bottom: 0.75rem; }
+.bullets li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.95rem;
+}
+.bullets li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.project-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.project {
+    padding: 1.25rem;
+    margin: 0 -1.25rem;
+}
+.project p { font-size: 0.95rem; margin-bottom: 0.75rem; }
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.tags li {
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 999px;
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.9rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-strong);
+}
+.text-link:hover { color: var(--accent); }
+
+/* =========================================================
+   Skills
+   ========================================================= */
+.skill-groups { display: grid; gap: 1.75rem; }
+
+@media (min-width: 640px) {
+    .skill-groups { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+.skill-group h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* =========================================================
+   Contact & buttons
+   ========================================================= */
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s, transform 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-primary { background: var(--accent-strong); color: var(--on-accent); }
+.btn-primary:hover { background: var(--accent); color: var(--on-accent); }
+
+.btn-outline { border-color: var(--border); color: var(--text-strong); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.site-footer p { margin: 0; }
