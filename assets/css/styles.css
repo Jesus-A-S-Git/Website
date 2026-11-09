@@ -452,3 +452,64 @@ main {
     color: var(--text-muted);
 }
 .site-footer p { margin: 0; }
+
+/* =========================================================
+   Résumé details
+   ========================================================= */
+.location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.entry-sub,
+.project-meta {
+    margin: -0.35rem 0 0.6rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.project-meta {
+    margin: 0 0 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.entry-body > .entry-sub:last-child { margin-bottom: 0; }
+
+.subhead {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 2rem 0 0.75rem;
+}
+
+.cert-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+    color: var(--text-strong);
+}
+.cert-list li:last-child { border-bottom: 0; }
+.cert-year { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; }
+
+.contact-email {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Tighter nav spacing so 7 sections fit on shorter laptop screens */
+@media (min-width: 1024px) {
+    .section-nav { margin-top: 2.5rem; }
+    .section-nav a { padding: 0.45rem 0; }
+}
+@media (min-width: 1024px) and (max-height: 760px) {
+    .sidebar { padding: 3.5rem 0 2.5rem; }
+    .avatar { display: none; }
+}
