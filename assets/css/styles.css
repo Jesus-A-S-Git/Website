@@ -498,11 +498,6 @@ main {
 .cert-list li:last-child { border-bottom: 0; }
 .cert-year { color: var(--text-muted); font-size: 0.85rem; white-space: nowrap; }
 
-.contact-email {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
 
 /* Tighter nav spacing so 7 sections fit on shorter laptop screens */
 @media (min-width: 1024px) {
@@ -513,3 +508,5 @@ main {
     .sidebar { padding: 3.5rem 0 2.5rem; }
     .avatar { display: none; }
 }
+
+button.btn { font: inherit; font-weight: 600; font-size: 0.95rem; cursor: pointer; }

@@ -51,3 +51,17 @@
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 })();
+
+// ---------- Contact button ----------
+// The address is stored encoded and only assembled on click, so it never
+// appears in the page text or in plain form in the source (keeps it out of
+// the hands of spam scrapers).
+(function () {
+    var btn = document.getElementById('contactButton');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+        var to = atob('SmVzdXMuQS5TYWVuejFAZ21haWwuY29t');
+        var subject = encodeURIComponent('Hello from your website');
+        window.location.href = 'mailto:' + to + '?subject=' + subject;
+    });
+})();
