@@ -1,70 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesus A. Saenz — Materials, Process &amp; Quality Engineer</title>
-    <meta name="description" content="Jesus A. Saenz — Materials, Physics and Process Engineer at Boeing with an M.S. in Systems Engineering and Management. Experience, projects, education and contact information.">
+    <meta name="description" content="Jesus A. Saenz — Materials, Physics and Process Engineer at Boeing. Composite materials qualification, root cause and supplier quality for flight hardware. M.S. Systems Engineering, Lean Six Sigma Green Belt.">
+    <meta property="og:type" content="website">
     <meta property="og:title" content="Jesus A. Saenz — Materials, Process &amp; Quality Engineer">
-    <meta property="og:description" content="Materials, Physics and Process Engineer at Boeing. Experience, projects, education and contact information.">
-    <meta name="theme-color" content="#0b1120">
+    <meta property="og:description" content="Aerospace materials &amp; process engineer at Boeing. I find root cause and make fixes stick.">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0c10'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-size='14' font-weight='700' fill='%23ff7a3d' text-anchor='middle'%3EJS%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Apply the saved theme before first paint to avoid a flash -->
     <script>
+        document.documentElement.classList.replace('no-js', 'js');
         try {
             var t = localStorage.getItem('theme');
             if (t) document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jesus A. Saenz",
+        "jobTitle": "Materials, Physics & Process Engineer",
+        "worksFor": { "@type": "Organization", "name": "Boeing" },
+        "alumniOf": "The University of Texas at Dallas",
+        "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA" },
+        "sameAs": ["https://www.linkedin.com/in/jesus-a-saenz/", "https://github.com/Jesus-A-S-Git"]
+    }
+    </script>
 </head>
 <body>
     <a class="skip-link" href="#content">Skip to content</a>
+    <div class="spotlight" aria-hidden="true"></div>
+    <div class="blueprint" aria-hidden="true"></div>
 
     <div class="layout">
-        <!-- ============ SIDEBAR ============ -->
+        <!-- ============ SIDEBAR / HERO ============ -->
         <header class="sidebar">
             <div>
-                <div class="avatar" aria-hidden="true">JS</div>
-                <h1 class="name"><a href="#top">Jesus A. Saenz</a></h1>
-                <p class="role">Materials, Physics &amp; Process Engineer at Boeing</p>
-                <p class="tagline">Aerospace engineer qualifying composite materials and processes, with a background in supplier quality and systems engineering.</p>
-                <p class="location">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    Seattle area, WA
+                <p class="telemetry hero-reveal" style="--i:0">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span>Status: open to opportunities</span>
                 </p>
+                <h1 class="name hero-reveal" style="--i:1"><a href="#top">Jesus A. Saenz</a></h1>
+                <p class="role hero-reveal" style="--i:2">Materials, Physics &amp; Process Engineer <span class="at">@ Boeing</span></p>
+                <p class="tagline hero-reveal" style="--i:3">I qualify composite materials and processes for flight hardware, and I find root cause and make fixes stick.</p>
 
-                <nav class="section-nav" aria-label="Sections">
+                <div class="hero-actions hero-reveal" style="--i:4">
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/jesus-a-saenz/" target="_blank" rel="noopener">
+                        Contact me
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                    </a>
+                    <button class="btn btn-outline" type="button" id="printResume" data-print>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+                        Résumé PDF
+                    </button>
+                </div>
+
+                <nav class="section-nav hero-reveal" style="--i:5" aria-label="Sections">
                     <ul>
-                        <li><a href="#about" class="active"><span class="indicator"></span>About</a></li>
-                        <li><a href="#experience"><span class="indicator"></span>Experience</a></li>
-                        <li><a href="#projects"><span class="indicator"></span>Projects</a></li>
-                        <li><a href="#education"><span class="indicator"></span>Education</a></li>
-                        <li><a href="#leadership"><span class="indicator"></span>Leadership</a></li>
-                        <li><a href="#skills"><span class="indicator"></span>Skills</a></li>
-                        <li><a href="#contact"><span class="indicator"></span>Contact</a></li>
+                        <li><a href="#about" class="active"><span class="num">01</span><span class="indicator"></span>About</a></li>
+                        <li><a href="#experience"><span class="num">02</span><span class="indicator"></span>Experience</a></li>
+                        <li><a href="#work"><span class="num">03</span><span class="indicator"></span>Selected Work</a></li>
+                        <li><a href="#skills"><span class="num">04</span><span class="indicator"></span>Capabilities</a></li>
+                        <li><a href="#education"><span class="num">05</span><span class="indicator"></span>Education</a></li>
+                        <li><a href="#leadership"><span class="num">06</span><span class="indicator"></span>Leadership</a></li>
+                        <li><a href="#contact"><span class="num">07</span><span class="indicator"></span>Contact</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="sidebar-footer">
+            <div class="sidebar-footer hero-reveal" style="--i:6">
                 <ul class="socials" aria-label="Social links">
                     <li>
                         <a href="https://www.linkedin.com/in/jesus-a-saenz/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/Jesus-A-S-Git" target="_blank" rel="noopener" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>
                         </a>
                     </li>
                 </ul>
+                <p class="telemetry coords" aria-label="Location: Seattle area, Washington">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Seattle, WA · 47.61°N 122.33°W
+                </p>
+                <p class="print-only">linkedin.com/in/jesus-a-saenz · Seattle area, WA</p>
                 <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light / dark theme">
-                    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-                    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 </button>
             </div>
         </header>
@@ -72,19 +103,57 @@
         <!-- ============ MAIN CONTENT ============ -->
         <main id="content">
 
+            <!-- METRICS -->
+            <section class="metrics" aria-label="Career highlights" data-reveal>
+                <div class="metric">
+                    <span class="metric-value"><span class="count" data-to="3000">3,000</span>+</span>
+                    <span class="metric-label">Suppliers reached</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value"><span class="count" data-to="50">50</span>+</span>
+                    <span class="metric-label">Defect investigations led</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value"><span class="count" data-to="13">13</span></span>
+                    <span class="metric-label">Engineers on team I led</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value"><span class="count" data-to="6">6</span>+ yrs</span>
+                    <span class="metric-label">Aerospace &amp; defense</span>
+                </div>
+            </section>
+
             <!-- ABOUT -->
-            <section id="about" class="section" aria-label="About me">
-                <h2 class="section-title">About</h2>
-                <p>I'm an analytical, solutions-driven engineer who has worked in technical problem-solving roles since 2020. Today I'm a <strong>Materials, Physics and Process Engineer at Boeing</strong>, where I develop and qualify composite materials and processing methods and support composite part fabrication. Before that, I spent two and a half years as a Supplier Quality Engineer leading investigations into supplier defects.</p>
-                <p>My background spans <strong>aerospace and defense</strong>: materials and quality roles at Boeing, Leonardo DRS, Bell Helicopter and Collins Aerospace, plus functional safety research with Amazon Robotics at UT Dallas. I hold an M.S. in Systems Engineering and Management and a B.S. in Mechanical Engineering, and a Lean Six Sigma Green Belt.</p>
-                <p>Outside of work I'm a director with the Society of Hispanic Professional Engineers in Puget Sound, connecting engineers with schools and underrepresented STEM communities. I'm bilingual in English and Spanish, and I recently completed private pilot ground school.</p>
+            <section id="about" class="section" aria-labelledby="about-title">
+                <h2 class="section-title" id="about-title"><span class="num">01</span>About</h2>
+                <div data-reveal>
+                    <p class="lead">I'm an analytical, solutions-driven engineer who has worked in hands-on technical problem-solving roles since 2020.</p>
+                    <p>Today I'm a <strong>Materials, Physics and Process Engineer at Boeing</strong>, where I develop and qualify composite materials and processing methods and support composite part fabrication. Before that I spent two and a half years as a <strong>Supplier Quality Engineer</strong>, leading investigations into supplier defect escapements and standardizing how thousands of suppliers report issues.</p>
+                    <p>My background spans <strong>aerospace and defense</strong>: materials and quality roles at Boeing, Leonardo DRS, Bell Helicopter and Collins Aerospace, plus functional safety research with Amazon Robotics at UT Dallas. I hold an <strong>M.S. in Systems Engineering and Management</strong>, a B.S. in Mechanical Engineering, and a Lean Six Sigma Green Belt.</p>
+                    <p>Outside of work I'm a director with the Society of Hispanic Professional Engineers in Puget Sound. I'm bilingual in English and Spanish, and I recently completed private pilot ground school.</p>
+                </div>
+
+                <div class="now-card" data-reveal>
+                    <div class="now-row">
+                        <span class="telemetry">Currently</span>
+                        <span>Qualifying composite materials &amp; processes at Boeing</span>
+                    </div>
+                    <div class="now-row">
+                        <span class="telemetry">Seeking</span>
+                        <span>Materials &amp; process, quality and supplier engineering roles on flight hardware</span>
+                    </div>
+                    <div class="now-row">
+                        <span class="telemetry">Based in</span>
+                        <span>Seattle area, WA</span>
+                    </div>
+                </div>
             </section>
 
             <!-- EXPERIENCE -->
-            <section id="experience" class="section" aria-label="Work experience">
-                <h2 class="section-title">Experience</h2>
-                <ol class="timeline">
-                    <li class="entry">
+            <section id="experience" class="section" aria-labelledby="exp-title">
+                <h2 class="section-title" id="exp-title"><span class="num">02</span>Experience</h2>
+                <ol class="timeline hover-group">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Jan 2026 — Present</div>
                         <div class="entry-body">
                             <h3>Materials, Physics &amp; Process Engineer III · <span class="org">Boeing</span></h3>
@@ -93,15 +162,15 @@
                                 <li>Provide technical evaluation and material and process support to composite part fabrication.</li>
                                 <li>Lead root-cause investigations and implement corrective and preventive actions for material and process issues.</li>
                                 <li>Create and execute test plans, write reports, and contribute to specifications for materials, tools and processes.</li>
-                                <li>Qualify and approve equipment, materials and processes, and guide material testing in the Materials &amp; Processes Laboratory.</li>
+                                <li>Qualify and approve equipment, materials and processes, and guide testing in the Materials &amp; Processes Laboratory.</li>
                                 <li>Coordinate with Design, Production, Manufacturing and Quality Engineering and with Procurement.</li>
                             </ul>
                             <ul class="tags">
-                                <li>Composites</li><li>Materials &amp; Processes</li><li>Qualification Testing</li><li>Root Cause Analysis</li>
+                                <li>Composites</li><li>Materials &amp; Processes</li><li>Qualification Testing</li><li>RCCA</li>
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Jul 2023 — Dec 2025</div>
                         <div class="entry-body">
                             <h3>Supplier Quality Engineer · <span class="org">Boeing Commercial Airplanes</span></h3>
@@ -111,21 +180,21 @@
                                 <li><strong>Conducted 50+ investigations</strong> into supplier defect escapements, leading root cause analysis and capture of affected parts.</li>
                                 <li>Built defect evaluations and trend analyses on suspect nonconformances, driving data-driven corrective actions across the supply chain.</li>
                                 <li>Implemented the Initial Production Verification Tool at suppliers, improving process consistency and catching problems before they arose.</li>
-                                <li>Delivered daily report-outs to the Director and Vice Director of Quality on nonconformance escapements and the solutions in progress.</li>
-                                <li>Worked across part requirements from machined detail parts to wire bundle (WIRS) requirements.</li>
+                                <li>Delivered daily report-outs to the Director and Vice Director of Quality on nonconformance escapements and solutions in progress.</li>
+                                <li>Worked across requirements from machined detail parts to wire bundle (WIRS) requirements.</li>
                             </ul>
                             <ul class="tags">
                                 <li>Root Cause Analysis</li><li>Supplier Quality</li><li>Data Analysis</li><li>Executive Reporting</li>
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Apr — Aug 2022</div>
                         <div class="entry-body">
                             <h3>Quality Engineering Intern · <span class="org">Bell Helicopter Textron</span></h3>
                             <ul class="bullets">
                                 <li>Developed a 3D training program on composite autoclave and advanced repair methods, improving policy adherence and reducing compliance issues.</li>
-                                <li>Improved information retention by 11% and cut training delinquencies by 7%.</li>
+                                <li>Improved information retention by <strong>11%</strong> and cut training delinquencies by <strong>7%</strong>.</li>
                                 <li>Helped train bonding, paint and repair technicians by strengthening existing training programs.</li>
                             </ul>
                             <ul class="tags">
@@ -133,7 +202,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Jan — May 2022</div>
                         <div class="entry-body">
                             <h3>Functional Safety Systems Researcher · <span class="org">University of Texas at Dallas</span></h3>
@@ -147,7 +216,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">May — Aug 2021</div>
                         <div class="entry-body">
                             <h3>Quality Engineer Intern · <span class="org">Collins Aerospace, Raytheon Technologies</span></h3>
@@ -160,7 +229,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">May 2020 — May 2021</div>
                         <div class="entry-body">
                             <h3>Quality Assurance Technician · <span class="org">Leonardo DRS</span></h3>
@@ -171,59 +240,120 @@
                                 <li>Supported real-time inspections with CMMs and depth gages, isolating measurement inconsistencies and developing fixes.</li>
                             </ul>
                             <ul class="tags">
-                                <li>SQL</li><li>Power BI</li><li>AS9100</li><li>Inspection</li>
+                                <li>SQL</li><li>Power BI</li><li>AS9100</li><li>CMM Inspection</li>
                             </ul>
                         </div>
                     </li>
                 </ol>
-                <!-- Optional: drop a resume.pdf into assets/ and uncomment this link
-                <a class="text-link" href="assets/resume.pdf" target="_blank" rel="noopener">View full résumé <span aria-hidden="true">→</span></a>
-                -->
             </section>
 
-            <!-- PROJECTS -->
-            <section id="projects" class="section" aria-label="Projects">
-                <h2 class="section-title">Projects</h2>
-                <div class="project-list">
-                    <article class="project">
-                        <p class="project-meta">UT Southwestern Medical Center · 2021 – 2022</p>
-                        <h3>MRI Patient Assistance Device</h3>
-                        <p>Lead designer for an interdisciplinary student engineering team building an assistance device for patients who needed an MRI scan but couldn't use the facility's equipment. Prototyped with a physical therapist and medical faculty using CAD and rapid prototyping.</p>
-                        <ul class="tags"><li>Lead Designer</li><li>CAD</li><li>Rapid Prototyping</li></ul>
+            <!-- SELECTED WORK (case studies) -->
+            <section id="work" class="section" aria-labelledby="work-title">
+                <h2 class="section-title" id="work-title"><span class="num">03</span>Selected Work</h2>
+                <p class="section-intro" data-reveal>Case studies in problem → approach → result form. Details are generalized to respect proprietary and export-controlled information.</p>
+
+                <div class="case-list">
+                    <article class="case featured" data-reveal>
+                        <div class="case-head">
+                            <p class="telemetry">CS-01 · Boeing Commercial Airplanes · 2023 – 2025</p>
+                            <h3>Standardizing defect notification across 3,000+ suppliers</h3>
+                        </div>
+                        <dl class="case-grid">
+                            <div><dt>Problem</dt><dd>Suppliers reported ongoing quality issues to Boeing inconsistently, slowing containment of defect escapements.</dd></div>
+                            <div><dt>Approach</dt><dd>Led a 13-person team to define a single solution package: standard notification flow, guidance and tooling for suppliers.</dd></div>
+                            <div><dt>Result</dt><dd>Package rolled out to 3,000+ suppliers, reducing defects and standardizing how issues reach Boeing.</dd></div>
+                        </dl>
+                        <p class="case-role"><span class="telemetry">My role</span> Team lead · process design · stakeholder alignment</p>
                     </article>
-                    <article class="project">
-                        <p class="project-meta">UT Dallas × Amazon Robotics · 2022</p>
-                        <h3>Lithium-Ion Battery Life-Cycle Simulation</h3>
-                        <p>A Python and MATLAB simulation predicting battery life cycle from test data, built alongside a functional safety requirement system for the battery.</p>
-                        <ul class="tags"><li>Python</li><li>MATLAB</li><li>Functional Safety</li></ul>
+
+                    <article class="case" data-reveal>
+                        <div class="case-head">
+                            <p class="telemetry">CS-02 · Bell Helicopter Textron · 2022</p>
+                            <h3>3D training for composite autoclave &amp; repair</h3>
+                        </div>
+                        <dl class="case-grid">
+                            <div><dt>Problem</dt><dd>Compliance issues and training delinquencies among bonding, paint and repair technicians.</dd></div>
+                            <div><dt>Approach</dt><dd>Built a 3D training program covering composite autoclave and advanced repair methods.</dd></div>
+                            <div><dt>Result</dt><dd><strong>+11%</strong> information retention and <strong>−7%</strong> training delinquencies.</dd></div>
+                        </dl>
+                        <p class="case-role"><span class="telemetry">My role</span> Designer &amp; developer of the program</p>
                     </article>
-                    <article class="project">
-                        <p class="project-meta">Boeing Commercial Airplanes · 2023 – 2025</p>
-                        <h3>Supplier Standardization Package</h3>
-                        <p>A standardized solution package, produced by a 13-person team I led, that 3,000+ suppliers use to reduce defects and report ongoing issues to Boeing consistently.</p>
-                        <ul class="tags"><li>Team Leadership</li><li>Process Design</li><li>Supplier Quality</li></ul>
+
+                    <article class="case" data-reveal>
+                        <div class="case-head">
+                            <p class="telemetry">CS-03 · UT Dallas × Amazon Robotics · 2022</p>
+                            <h3>Lithium-ion battery life-cycle simulation</h3>
+                        </div>
+                        <dl class="case-grid">
+                            <div><dt>Problem</dt><dd>A robotics battery needed functional safety requirements and a way to predict its life cycle.</dd></div>
+                            <div><dt>Approach</dt><dd>Wrote a Python and MATLAB simulation driven by test data, alongside a functional safety requirement system.</dd></div>
+                            <div><dt>Result</dt><dd>Life-cycle predictions and findings presented monthly to Amazon Robotics stakeholders.</dd></div>
+                        </dl>
+                        <p class="case-role"><span class="telemetry">My role</span> Researcher · modeling &amp; data analysis</p>
                     </article>
-                    <article class="project">
-                        <p class="project-meta">Graduate coursework · UT Dallas</p>
-                        <h3>Systems Architecture &amp; Risk Assessment</h3>
-                        <p>Projects in automotive systems architecture, network systems architecture and safety-systems risk assessment.</p>
-                        <ul class="tags"><li>SysML</li><li>Systems Architecture</li><li>Risk Assessment</li></ul>
+
+                    <article class="case" data-reveal>
+                        <div class="case-head">
+                            <p class="telemetry">CS-04 · UT Southwestern Medical Center · 2021 – 2022</p>
+                            <h3>MRI patient assistance device</h3>
+                        </div>
+                        <dl class="case-grid">
+                            <div><dt>Problem</dt><dd>Some patients who needed an MRI scan couldn't use the facility's existing equipment.</dd></div>
+                            <div><dt>Approach</dt><dd>Prototyped an assistance device with a physical therapist and medical faculty using CAD and rapid prototyping.</dd></div>
+                            <div><dt>Result</dt><dd>Working prototype delivered by an interdisciplinary student engineering team.</dd></div>
+                        </dl>
+                        <p class="case-role"><span class="telemetry">My role</span> Lead designer</p>
                     </article>
                 </div>
             </section>
 
+            <!-- CAPABILITIES (bento) -->
+            <section id="skills" class="section" aria-labelledby="skills-title">
+                <h2 class="section-title" id="skills-title"><span class="num">04</span>Capabilities</h2>
+                <div class="bento">
+                    <div class="tile tile-wide" data-reveal>
+                        <p class="telemetry">Materials &amp; Processes</p>
+                        <p class="tile-text">Composite material and process qualification, test planning and reporting, specification writing, M&amp;P lab testing.</p>
+                        <p class="tile-proof">Applied at Boeing M&amp;P · Bell composites training</p>
+                    </div>
+                    <div class="tile" data-reveal>
+                        <p class="telemetry">Quality</p>
+                        <p class="tile-text">RCCA, CAPA, MRB, nonconformance trending, AS9100.</p>
+                        <p class="tile-proof">50+ investigations · Leonardo DRS</p>
+                    </div>
+                    <div class="tile" data-reveal>
+                        <p class="telemetry">Methods</p>
+                        <p class="tile-text">Lean Six Sigma Green Belt, systems engineering, SysML, risk assessment, functional safety.</p>
+                        <p class="tile-proof">M.S. Systems Eng. · Amazon Robotics</p>
+                    </div>
+                    <div class="tile" data-reveal>
+                        <p class="telemetry">Data &amp; Code</p>
+                        <ul class="tags"><li>SQL</li><li>Python</li><li>MATLAB</li><li>Power BI</li><li>Tableau</li><li>Java</li></ul>
+                    </div>
+                    <div class="tile" data-reveal>
+                        <p class="telemetry">CAD &amp; Inspection</p>
+                        <ul class="tags"><li>SolidWorks</li><li>CREO</li><li>AutoCAD</li><li>CMM</li><li>Tolerance stack-up</li></ul>
+                    </div>
+                    <div class="tile tile-wide" data-reveal>
+                        <p class="telemetry">Languages</p>
+                        <p class="tile-text">English &amp; Spanish, bilingual.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- EDUCATION -->
-            <section id="education" class="section" aria-label="Education and certifications">
-                <h2 class="section-title">Education</h2>
+            <section id="education" class="section" aria-labelledby="edu-title">
+                <h2 class="section-title" id="edu-title"><span class="num">05</span>Education</h2>
                 <ol class="timeline">
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">2023</div>
                         <div class="entry-body">
                             <h3>M.S., Systems Engineering and Management</h3>
                             <p class="entry-sub">The University of Texas at Dallas · Richardson, TX</p>
+                            <p class="entry-note">Coursework projects in automotive and network systems architecture and safety-systems risk assessment.</p>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">2022</div>
                         <div class="entry-body">
                             <h3>B.S., Mechanical Engineering</h3>
@@ -232,17 +362,17 @@
                     </li>
                 </ol>
                 <h3 class="subhead">Certifications</h3>
-                <ul class="cert-list">
+                <ul class="cert-list" data-reveal>
                     <li><span>Lean Six Sigma Management: Green Belt</span><span class="cert-year">2025</span></li>
                     <li><span>Private Pilot Ground School: Certificate of Completion</span><span class="cert-year">2025</span></li>
                 </ul>
             </section>
 
             <!-- LEADERSHIP -->
-            <section id="leadership" class="section" aria-label="Community leadership">
-                <h2 class="section-title">Leadership</h2>
-                <ol class="timeline">
-                    <li class="entry">
+            <section id="leadership" class="section" aria-labelledby="lead-title">
+                <h2 class="section-title" id="lead-title"><span class="num">06</span>Leadership</h2>
+                <ol class="timeline hover-group">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Aug 2023 — Present</div>
                         <div class="entry-body">
                             <h3>Director of Community Outreach · <span class="org">SHPE Puget Sound</span></h3>
@@ -253,7 +383,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="entry">
+                    <li class="entry" data-reveal>
                         <div class="entry-date">Dec 2023 — Dec 2024</div>
                         <div class="entry-body">
                             <h3>North Puget Sound Engagement Lead · <span class="org">Boeing Familia</span></h3>
@@ -266,40 +396,25 @@
                 </ol>
             </section>
 
-            <!-- SKILLS -->
-            <section id="skills" class="section" aria-label="Skills">
-                <h2 class="section-title">Skills</h2>
-                <div class="skill-groups">
-                    <div class="skill-group">
-                        <h3>Materials &amp; Quality</h3>
-                        <ul class="tags"><li>Composite Materials</li><li>Process Qualification</li><li>Test Planning</li><li>Root Cause Analysis</li><li>CAPA</li><li>MRB</li><li>Lean Six Sigma</li><li>Data Analysis</li><li>Issue Tracking</li><li>Cross-functional Collaboration</li></ul>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Tools &amp; Languages</h3>
-                        <ul class="tags"><li>SQL</li><li>Python</li><li>Java</li><li>MATLAB</li><li>Power BI</li><li>Tableau</li></ul>
-                    </div>
-                    <div class="skill-group">
-                        <h3>CAD &amp; Design</h3>
-                        <ul class="tags"><li>SolidWorks</li><li>CREO</li><li>AutoCAD</li></ul>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Spoken Languages</h3>
-                        <ul class="tags"><li>English</li><li>Spanish</li></ul>
-                    </div>
-                </div>
-            </section>
-
             <!-- CONTACT -->
-            <section id="contact" class="section" aria-label="Contact">
-                <h2 class="section-title">Contact</h2>
-                <p class="lead">I'm open to new opportunities and collaborations. Whether you have a role in mind, a question, or just want to connect, send me a message on LinkedIn.</p>
-                <div class="contact-actions">
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/jesus-a-saenz/" target="_blank" rel="noopener">Contact me on LinkedIn</a>
+            <section id="contact" class="section" aria-labelledby="contact-title">
+                <h2 class="section-title" id="contact-title"><span class="num">07</span>Contact</h2>
+                <div class="contact-card" data-reveal>
+                    <p class="telemetry"><span class="status-dot" aria-hidden="true"></span>Open to opportunities</p>
+                    <p class="contact-headline">Building flight hardware that needs to be right the first time? Let's talk.</p>
+                    <p>Whether you have a role in mind, a question, or just want to connect, send me a message on LinkedIn.</p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="https://www.linkedin.com/in/jesus-a-saenz/" target="_blank" rel="noopener">
+                            Contact me on LinkedIn
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                        </a>
+                        <button class="btn btn-outline" type="button" data-print>Download résumé PDF</button>
+                    </div>
                 </div>
             </section>
 
             <footer class="site-footer">
-                <p>© <span id="year">2026</span> Jesus A. Saenz.</p>
+                <p>© <span id="year">2026</span> Jesus A. Saenz · Hand-built with HTML &amp; CSS, set in Space Grotesk, Inter &amp; JetBrains Mono.</p>
             </footer>
         </main>
     </div>
