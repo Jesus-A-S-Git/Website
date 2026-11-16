@@ -1,19 +1,31 @@
 (function () {
     var root = document.documentElement;
 
-    // Theme toggle, remembered between visits
+    // Theme toggle, remembered between visits. It needs JS, so it starts hidden.
     var toggle = document.getElementById('themeToggle');
+    var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    function isDark() {
+        var t = root.getAttribute('data-theme');
+        return t ? t === 'dark' : darkQuery.matches;
+    }
+    function syncToggle() {
+        if (toggle) toggle.setAttribute('aria-pressed', isDark() ? 'true' : 'false');
+    }
     if (toggle) {
+        toggle.hidden = false;
+        syncToggle();
         toggle.addEventListener('click', function () {
-            var current = root.getAttribute('data-theme') ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            var next = current === 'dark' ? 'light' : 'dark';
+            var next = isDark() ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
             try { localStorage.setItem('theme', next); } catch (e) {}
+            syncToggle();
         });
+        // Follow OS changes while no theme has been picked
+        if (darkQuery.addEventListener) darkQuery.addEventListener('change', syncToggle);
     }
 
-    // "Print résumé" uses the print stylesheet
+    // "Print résumé" uses the print stylesheet; also hidden until JS runs
+    document.querySelectorAll('[data-print-item]').forEach(function (li) { li.hidden = false; });
     document.querySelectorAll('[data-print]').forEach(function (btn) {
         btn.addEventListener('click', function () { window.print(); });
     });
