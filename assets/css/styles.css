@@ -299,6 +299,7 @@ figcaption a { color: inherit; }
     .org { margin: 0 0 0.15rem; font-size: 0.95rem; }
     .date { font-size: 0.95rem; }
     .bullets li { margin-bottom: 0.08rem; }
+    .bullets li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .skills > div { grid-template-columns: 1.4in 1fr; padding: 0.12rem 0; border: 0 !important; }
     .subhead { margin: 0.5rem 0 0.2rem; }
     .plain-list li { padding: 0.05rem 0; }
