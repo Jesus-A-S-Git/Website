@@ -52,6 +52,7 @@ h1, h2, h3 { margin: 0; color: var(--heading); }
 p { margin: 0 0 1rem; }
 ul, ol, dl, dd { margin: 0; padding: 0; list-style: none; }
 img { display: block; max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
 
 a {
     color: var(--link);
@@ -71,6 +72,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
     color: var(--bg);
 }
 .skip-link:focus { left: 0.75rem; }
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* Layout: one readable column */
 .page {
@@ -152,10 +165,11 @@ figcaption {
 }
 figcaption a { color: inherit; }
 
-.hero-figure { margin: 2.75rem 0 0; }
+.hero-figure { margin: 2rem 0 0; }
 .hero-figure img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 21 / 9;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 2px;
     background: var(--rule);
@@ -262,26 +276,30 @@ figcaption a { color: inherit; }
 }
 .site-footer p { margin: 0; }
 
-/* Print: a plain résumé */
+/* Print: a plain résumé. Setting the root size lets every rem scale down together. */
 @media print {
-    @page { margin: 0.5in 0.55in; }
+    @page { size: letter; margin: 0.5in 0.55in; }
     :root { --bg: #fff; --text: #222; --heading: #000; --muted: #555; --rule: #bbb; --link: #000; }
-    body { font-size: 9.5pt; line-height: 1.38; }
+    html { font-size: 9.5pt; }
+    body { font-size: 1rem; line-height: 1.38; }
     .page { max-width: none; padding: 0; }
     .theme-toggle, .links, .hero-figure, figure, #projects, #contact, .site-footer, .skip-link { display: none !important; }
     .print-only { display: block; margin: 0.2rem 0 0; }
-    .name { font-size: 19pt; }
+    .name { font-size: 2rem; }
     .role { margin: 0.1rem 0 0.4rem; }
-    .intro { font-size: 9.5pt; margin-bottom: 0; }
-    .section { margin-top: 0.7rem; padding-top: 0.35rem; border-top-color: #000; }
-    .section h2 { margin-bottom: 0.35rem; font-size: 11.5pt; }
+    .intro { font-size: 1rem; margin-bottom: 0; }
+    .section { margin-top: 0.75rem; padding-top: 0.35rem; border-top-color: #000; }
+    .section h2 { margin-bottom: 0.35rem; font-size: 1.2rem; }
     #about p:nth-of-type(n+3) { display: none; }
     #about p { margin-bottom: 0.3rem; }
     .entries > li + li { margin-top: 0.5rem; }
-    .entry h3 { font-size: 10pt; }
+    .entry h3, .subhead { font-size: 1.05rem; }
     .entry-head { break-after: avoid; }
-    .org { margin: 0 0 0.15rem; }
+    .entry, .plain-list li { break-inside: avoid; }
+    .org { margin: 0 0 0.15rem; font-size: 0.95rem; }
+    .date { font-size: 0.95rem; }
     .bullets li { margin-bottom: 0.08rem; }
+    .bullets li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .skills > div { grid-template-columns: 1.4in 1fr; padding: 0.12rem 0; border: 0 !important; }
     .subhead { margin: 0.5rem 0 0.2rem; }
     .plain-list li { padding: 0.05rem 0; }
